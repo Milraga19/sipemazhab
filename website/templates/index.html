@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIPEMAZHAB - Sistem Pencarian Hukum FIqih</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+
+<body>
+    <section id="home">
+        <nav>
+            <a href="#home" class="logo" style="margin-left: 10px;">SIPEMAZHAB</a>
+            <!-- <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#certificate">Certificate</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul> -->
+        </nav>
+        <div class="first-container">
+            <p>Sistem Pencarian Hukum Fiqih</p>
+            <p>Menurut Mazhab Syafi’i, Hanafi Maliki dan Hambali</p>
+            <form method="post" action="/result">
+                <input name="query" class="search" type="text" placeholder="Cari Hukum">
+                <button type="submit" class="ig-button">Cari</button>
+            </form>
+        </div>
+        <img src="{{ url_for('static',filename='styles/img/profile.png') }}" class="model" alt="model">
+    </section>
+    
+    <div class="certificate" id="certificate" style="padding-top: 90px;">
+        <div class="certificate-text">
+            <p>Tentang Aplikasi</p>
+            <!-- <p>Obtained</p> -->
+            <p>Aplikasi ini merupakan Sistem Pencarian yang menerapkan konsep STKI (Sistem Temu Kembali Informasi) dengan Metode Vector Space Model (VSM) dan
+            Positional Index</p>
+        </div>
+        <!-- <div class="box">
+            <div class="box-1" onclick="window.location.href='img/certificate-1.jpg';"><img src="
+                img/certificate-1.jpg" alt="certificate-1" width="300px;"></div>
+            <div class="box-2" onclick="window.location.href='img/certificate-2.jpg';"><img src="img/certificate-2.jpg"
+                    alt="certificate-2" width="300px"></div>
+            <div class="box-3" onclick="window.location.href='img/certificate-3.jpg';"><img src="img/certificate-3.jpg"
+                    alt="certificate-3" width="300px"></div>
+        </div> -->
+    </div>
+    <div class="contact" id="contact">
+        <p>If you want to contact me for business or something click this button.</p>
+        <a href="mailto:raden.ijlal@gmail.com"><button>Contact Me</button></a>
+    </div>
+    <footer>
+        <p>MILRAGA</p>
+        <p>Also check my other social media here.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/muh.ijlal"><img src="{{ url_for('static',filename='styles/img/facebook.png') }}" width="15px" alt="facebook"></a>
+            <a href="https://twitter.com/ijlald24"><img src="{{ url_for('static',filename='styles/img/twitter.png') }}" width="15px" alt="twitter"></a>
+            <a href="https://www.youtube.com/channel/UCVH_MfLho-oFJflbcGPsbDw"><img src="{{ url_for('static',filename='styles/img/youtube.png') }}" width="15px"
+                    alt="youtube"></a>
+        </div>
+        <p class="copyright">Copyright Muhammad Ijlal Prayoga</p>
+    </footer>
+    <div class="up-button">
+        <button onclick="window.location.href='#home';">^</button>
+    </div>
+</body>
+
+</html>

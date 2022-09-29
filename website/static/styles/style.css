@@ -1,0 +1,704 @@
+*{
+        box-sizing: border-box;
+    }
+body{
+    background-color: #F5F5F5;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    width: 100%;
+    height: 625px;
+    background-image: url('img/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    padding: 0px 5px;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li a {
+    margin: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #505050;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.logo {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.logo:hover{
+    color: white;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+    color: black
+}
+
+.first-container{
+    position: absolute;
+    left: 13%;
+    top: 42%;
+    transform: translate(-13%,-42%);
+}
+
+.first-container p{
+    line-height: 0px;
+    margin: 45px 0px 45px;
+}
+
+.first-container p:nth-child(1){
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: rgb(54, 54, 54);
+    font-size: 50px;
+}
+
+.first-container p:nth-child(2){
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(51, 48, 48);
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.model{
+    height: 520px;
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    transform: translate(-100%);
+}
+
+.search{
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-width: calc(var(--border-width) * 1px);
+    border-style: solid; 
+    border-color: var(--accent); 
+    border-radius: calc(var(--border-radius) * 1px); 
+    text-align: left; 
+    outline: transparent; 
+    width: 75%; 
+    transition: border-color calc(var(--transition, 0.2) * 1s) ease
+}
+
+.ig-button{
+    text-decoration: none;
+    padding: auto;
+    display: inline-block;
+    width: 130px;
+    height: 42px;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    outline: none;
+    margin: 0px 10px;
+    border: 2px solid #373636;
+    color: black;
+    transition: 0.5s;
+}
+
+.ig-button:hover{
+    color:white;
+    border: none;
+    background-color: black;
+}
+
+button:active{
+    transform: scale(1.1);
+}
+
+.about-container{
+    width: 60%;
+    height: 330px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin: -40px auto 20px auto;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-text{
+    width: 550px;
+}
+
+.about-text p:nth-child(1){
+    color: rgb(32, 30, 30);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 0px;
+}
+
+.about-text p:nth-child(2){
+    color: rgb(49, 48, 48);
+    font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    line-height: 5px;
+}
+
+.about-text p:nth-child(3),.about-text p:nth-child(4){
+    color:rgb(99, 96, 96);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+
+.certificate{
+    height: 400px;
+    background-color: white;
+    padding: 30px 198px 0 198px;
+}
+
+.certificate-modiv{
+    height: 100%;
+    background-color: #f0f0f0;
+    padding: 30px 198px 30px 198px;
+}
+
+.certificate-text p:nth-child(1){
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: rgb(61, 61, 61);
+    font-size: 30px;
+    line-height: 0px;
+}
+
+.certificate-text p:nth-child(2){
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(99, 98, 98);
+    font-size: 17px;
+}
+
+.certificate-text{
+    width: 500px;
+    margin: 50px 0px;
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-1,.box-2,.box-3{
+    width: 300px;
+    height: 212px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+.box-1:hover,.box-2:hover,.box-3:hover{
+    background-color: black;
+    opacity: 0.5;
+}
+
+.contact{
+    width: 100%;
+    height: 280px;
+    background-image: url("img/project\ in\ your\ mind.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact p{
+    color: white;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+.contact button{
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact button:hover{
+    color : white;
+    background-color: #1a1a1a;
+    border: 1px solid white;
+}
+
+footer{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer p:nth-child(1){
+    font-size: 30px;
+    color: #191919;
+    line-height: 10px;
+}
+
+footer p:nth-child(2){
+    font-size: 16px;
+    color: rgb(131, 130, 130);
+    width: 600px;
+    text-align: center;
+}
+
+.social-media a{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(221, 221, 221);
+    margin: 20px 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.social-media a:hover{
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.social-media{
+    display: flex;
+}
+
+.copyright{
+    color: #565555;
+    font-size: 13px;
+}
+
+.up-button{
+    position: fixed;
+    top: 90%;
+    left: 95%;
+    transform: translate(-90%);
+}
+
+.up-button button{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border: 2px solid #1a1a1a;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.up-button button:hover{
+    color:white;
+    border: none;
+    background-color: black;
+}
+
+@media (max-width:1000px) {
+
+    .model{
+        height: 460px;
+        left: 95%;
+        transform: translateX(-95%);
+    }
+
+    .first-container{
+        top: 46%;
+    }
+
+    .first-container .ig-button{
+        margin: 5px;
+    }
+
+    .about-container{
+        width: 90%;
+        border-radius: 10px;
+    }
+
+    .about-text{
+        width: 460px;        
+    }
+
+    .about-text p:nth-child(1){
+        font-size: 20px;
+    }
+
+    .about-text p:nth-child(2){
+        font-size: 10px;
+    }
+
+    .about-text p:nth-child(3),
+    .about-text p:nth-child(3){
+        font-size: 14px;
+    }
+
+    .certificate{
+        padding: 2% 5% 0 5%;
+        height: auto;
+    }
+
+    .box{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .box-1,.box-2,.box-3{
+        margin: 10px;
+    }
+
+    .contact{
+        height: 200px;
+    }
+
+    .contact p{
+        font-size: 26px;
+    }
+
+    .contact button{
+        font-size: 14px;
+        height: 35px;
+        width: 100px;
+    }
+}
+
+@media (max-width:770px) {
+    section{
+        /* width: 400px; */
+        background-image: none;
+        background-color: #f0f0f0;
+    }
+
+    .model{
+        display: none;
+    }
+
+    .first-container p:nth-child(2){
+        line-height: 40px;
+        font-size: 45px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .first-container{
+        top: 30%;
+        left: 30%;
+        transform: translate(-30%,-30%);
+    }
+
+    .about-container{
+        top: 0px;
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        padding: 30px 0px;
+        align-items: center;
+    }
+
+    .about-text{
+        width: 90%;
+        text-align: center;
+    }
+
+    .certificate-text{
+        width: 100%;
+    }
+
+    .contact{
+        height: 150px;
+    }
+
+    .contact p{
+        font-size: 14px;
+    }
+
+    .contact button{
+        width: 150px;
+        height: 33px;
+    }
+
+}
+
+@media (max-width:500px) {
+    body{
+        width: fit-content;
+    }
+    nav ul li a {
+        font-size: 10px;
+        margin-right: 5px;
+    }
+
+    .up-button{
+        top: 90%;
+        left: 98%;
+    }
+}
+
+
+/* General styles */
+
+body {
+	font: 13px/18px "Roboto", Arial, Helvetica sans-serif;
+}
+
+b, strong {
+	font-weight: 500;
+}
+
+h1 {
+	margin: 60px 0;
+	color: #666;
+	text-align: center;
+	font-weight: 300;
+	font-size: 2.0em;
+}
+
+.container {
+	width: 100%;
+}
+
+/* Verified reviews */
+
+a.verified-reviews {
+	display: block;
+	float: right;
+	margin: 20px 0 40px;
+}
+
+a.verified-reviews:before,
+a.verified-reviews:after {
+	display: table;
+	clear: both;
+	content: '';
+}
+
+/* Search results */
+
+.search-results h2 {
+	margin: 0 0 30px;
+	color: #08c;
+	text-align: left;
+	font-weight: 300;
+	font-size: 1.8em;
+}
+
+.search-results .hotel {
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	height: 130px;
+	border-bottom: 1px dashed #e5e5e5;
+}
+
+.search-results .hotel h3 {
+	margin: 0 0 10px;
+	color: #555;
+	font-weight: normal;
+	font-size: 1.3em;
+}
+
+/* Rating */
+
+.search-results .rating {
+	display: block;
+	margin-bottom: 15px;
+	height: 15px;
+}
+
+/* Stars */
+
+.search-results .hotel .stars{
+	float: left;
+	margin-top: -2px;
+	width: 85px;
+	color: #ccc;
+	font-size: 1.1em;
+}
+
+.search-results .hotel .stars span{
+	margin-right: -3px;
+}
+
+.search-results .hotel .stars span.active{
+	color: #ffb400;
+}
+
+/* TrustScore */
+
+.search-results .hotel .trustscore {
+	float: left;
+	width: 200px;
+}
+
+/* Ranking */
+
+.search-results .hotel .ranking {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	padding: 0 15px;
+	background: #119a11;
+	color: #fff;
+	font-size: .8em;
+}
+
+.search-results .hotel .rank-wrapper {
+	display:table-cell;
+	height: 38px;
+	vertical-align:middle;
+}
+
+.search-results .hotel .ranking span {
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 0 2px 1px rgba(0, 0, 0, .6);
+	font-size: 1.0em;
+	line-height: 1.2em;
+}
+
+/* Thumbnail */
+
+.search-results .hotel .thumbnail {
+	position: relative;
+	float: left;
+	margin: 0 20px 0 0;
+	width: 100px;
+	height: 100px;
+	background: #fff;
+}
+
+.search-results .hotel .thumbnail img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Deals */
+
+.search-results .hotel .deals {
+	float: right;
+	color: #428bca;
+	text-align: center;
+	font-weight: 300;
+	font-size: 1.2em;
+}
+
+.search-results .hotel .deals .price {
+	display: block;
+	margin: 10px 0;
+	font-size: 2.2em;
+}
+
+/* Snippets & hotel type */
+
+.search-results .hotel .hotel-type .ty-icon {
+	float: left;
+	margin-right: 8px;
+	font-size: 1.2em;
+}
+
+.search-results .hotel .hotel-type,
+.search-results .hotel .highlights {
+	float: left;
+	width: 650px;
+	color: #666;
+	font-weight: 300;
+	font-size: 1.1em;
+}
+
+.search-results .hotel .highlights {
+	font-style: italic;
+}
+
+.search-results .hotel .highlights span {
+	display: block;
+	float: left;
+	margin: 5px 5px 0 0;
+}
+
+.search-results .hotel .hotel-type span {
+	display: block;
+	margin-bottom: 5px;
+}
+
+/* Recommended hotels */
+
+.search-results.recommended .hotel {
+	margin-bottom: 30px;
+	padding: 20px;
+	height: 140px;
+	border-bottom: none;
+	background: #fafafa;
+}
+
+.search-results.recommended .hotel .thumbnail {
+	margin: -20px 20px 0 -20px;
+	width: 140px;
+	height: 140px;
+}
+
+.search-results.recommended .hotel .deals {
+	float: right;
+	color: #5cb85c;
+}
+
+.search-results.recommended .hotel .thumbnail {
+	padding: 0;
+	border: none;
+	border-radius: 0;
+}
+
+.btn-primary{
+  color: white;
+  background-color: #006994;
+  border-radius: 5px;
+  padding: 10px;
+}
