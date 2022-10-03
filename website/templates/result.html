@@ -2,71 +2,109 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIPEMAZHAB - Sistem Pencarian Hukum FIqih</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500,700"/>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SIPEMAZHAB - Sistem Pencarian Hukum FIqih</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
 
-        <nav>
-            <a href="/" class="logo" style="margin-left: 10px;">SIPEMAZHAB</a>
-            <!-- <ul>
+	<nav>
+		<a href="/" class="logo" style="margin-left: 10px; text-decoration:none;">SIPEMAZHAB</a>
+		<!-- <ul>
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#certificate">Certificate</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul> -->
-        </nav>
+	</nav>
 
 
-    <div class=" certificate-modiv">
+	<!-- <div class="certificate-modiv">
 		<h1>Hasil Pencarian {{ result }}:</h1>
-      <div class="search-results">
-		<h2>Kami Menemukan {{total}} hasil pencarian yang sesuai:</h2>
-		<!-- Placeholder where content will be inserted by JavaScript: -->
-		  {% for i,j in zip(names,bobot): %}
+		<div class="search-results">
+			<h2>Kami Menemukan {{total}} hasil pencarian yang sesuai:</h2>
+			{% for i,j in zip(names,bobot): %}
 
-		<div class="hotels">
-			<div class="hotel">
-				<div class="content">
-					<div class="deals">
-						<a href="/file/{{i}}/{{result}}" class="btn-primary">Lihat Dokumen</a>
-						<a href="/book/{{i}}" class="btn-primary">Lihat Di Buku</a>
+			<div class="hotels">
+				<div class="hotel">
+					<div class="content">
+						<div class="deals">
+							<a href="/file/{{i}}/{{result}}" class="btn-primary">Lihat Dokumen</a>
+							<a href="/book/{{i}}" class="btn-primary">Lihat Di Buku</a>
+						</div>
+						<h3>
+							<a>{{display_judul(i)}}</a>
+						</h3>
+						<div style="color: #555">Doc ID : {{i}}</div>
+						<div style="color: #555">Similarity : {{j}}</div>
+
+						<p class="highlights">
+							{{display_text(i,result)}}
+						</p>
 					</div>
-					<h3>
-						<a>{{display_judul(i)}}</a>
-					</h3>
-					<div style="color: #555">Doc ID : {{i}}</div>
-					<div style="color: #555">Similarity : {{j}}</div>
+				</div>
+			</div>
+			{%endfor%}
+		</div>
+	</div> -->
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h1 class="mt-4">Hasil Pencarian {{ result }}:</h1>
+				<div class="search-results">
+					<h2 class="mt-4">Kami Menemukan {{total}} hasil pencarian yang sesuai:</h2>
+                    {% for i,j in zip(names,bobot): %}
+					<div class="row align-items-center mt-5">
+						<div class="col">
+							<h3>
+								<a>{{display_judul(i)}}</a>
+							</h3>
+							<div style="color: #555">Doc ID : {{i}}</div>
+							<div style="color: #555">Similarity : {{j}}</div>
 
-					<p class="highlights">
-						{{display_text(i,result)}}
-					</p>
+							<p class="highlights">
+								{{display_text(i,result)}}
+							</p>
+						</div>
+						<div class="col-xl-4 col-md-12">
+							<a href="/file/{{i}}/{{result}}" class="btn-primary" style="text-decoration:none;">Lihat Dokumen</a>
+							<a href="/book/{{i}}" class="btn-primary" style="text-decoration:none;">Lihat Di Buku</a>
+						</div>
+					</div>
+                    {%endfor%}
 				</div>
 			</div>
 		</div>
-		  {%endfor%}
-      </div>
-	</div>
 
-    <footer>
-        <p>MILRAGA</p>
-        <p>Also check my other social media here.</p>
-        <div class="social-media">
-            <a href="https://www.facebook.com/muh.ijlal"><img src="{{ url_for('static',filename='styles/img/facebook.png') }}" width="15px" alt="facebook"></a>
-            <a href="https://twitter.com/ijlald24"><img src="{{ url_for('static',filename='styles/img/twitter.png') }}" width="15px" alt="twitter"></a>
-            <a href="https://www.youtube.com/channel/UCVH_MfLho-oFJflbcGPsbDw"><img src="{{ url_for('static',filename='styles/img/youtube.png') }}" width="15px"
-                    alt="youtube"></a>
-        </div>
-        <p class="copyright">Copyright Muhammad Ijlal Prayoga</p>
-    </footer>
-    <div class="up-button">
-        <button onclick="window.location.href='#home';">^</button>
-    </div>
+	</div>
+	<footer class="footer mt-auto py-3 bg-light">
+		<div class="container">
+			<span class="text-muted">Copyright Muhammad Ijlal Prayoga</span>
+		</div>
+	</footer>
+
+	<!-- <footer>
+		<p>MILRAGA</p>
+		<p>Also check my other social media here.</p>
+		<div class="social-media">
+			<a href="https://www.facebook.com/muh.ijlal"><img
+					src="{{ url_for('static',filename='styles/img/facebook.png') }}" width="15px" alt="facebook"></a>
+			<a href="https://twitter.com/ijlald24"><img src="{{ url_for('static',filename='styles/img/twitter.png') }}"
+					width="15px" alt="twitter"></a>
+			<a href="https://www.youtube.com/channel/UCVH_MfLho-oFJflbcGPsbDw"><img
+					src="{{ url_for('static',filename='styles/img/youtube.png') }}" width="15px" alt="youtube"></a>
+		</div>
+		<p class="copyright">Copyright Muhammad Ijlal Prayoga</p>
+	</footer> -->
+	<div class="up-button">
+		<button onclick="window.location.href='#home';">^</button>
+	</div>
 </body>
 
 </html>

@@ -140,8 +140,8 @@ def openbook(name):
     PATH = 'website\chromedriver.exe'
 
     web = webdriver.Chrome(PATH, chrome_options=chrome_opt)
-    web.get(
-        'https://drive.google.com/file/d/1cSSLbB6kasxZRbQHx6LDvzacGYGGFK_F/view')
+    web.get('https://drive.google.com/file/d/1cSSLbB6kasxZRbQHx6LDvzacGYGGFK_F/view')
+    # web.get('https://app.luminpdf.com/viewer/633a688daa40c0408012f8c2')
     web.maximize_window()
 
     keyboard = Controller()

@@ -74,7 +74,7 @@ nav ul li a:hover {
 }
 
 .first-container p{
-    line-height: 0px;
+    line-height: 60px;
     margin: 45px 0px 45px;
 }
 
@@ -412,6 +412,9 @@ footer p:nth-child(2){
 }
 
 @media (max-width:770px) {
+    body{
+        width: fit-content;
+    }
     section{
         /* width: 400px; */
         background-image: none;
@@ -422,11 +425,22 @@ footer p:nth-child(2){
         display: none;
     }
 
+    .first-container p:nth-child(1){
+    line-height: 60px;
+    margin: 45px 0px 10px;
+    }
+
     .first-container p:nth-child(2){
         line-height: 40px;
-        font-size: 45px;
+        font-size: 15px;
         margin: 0px;
         padding: 0px;
+        margin-bottom:20px;
+    }
+
+    .ig-button{
+        display:inline-block;
+        width:90px;
     }
 
     .first-container{
@@ -701,4 +715,18 @@ a.verified-reviews:after {
   background-color: #006994;
   border-radius: 5px;
   padding: 10px;
+}
+
+@media (max-width:770px){
+    .certificate-modiv{
+        padding: 10px 10px 10px 10px;
+    }
+    h1{
+        font-size: 20px;
+        text-align:left;
+    }
+
+    .search-results h2{
+        font-size:20px;
+    }
 }
