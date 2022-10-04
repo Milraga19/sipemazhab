@@ -132,7 +132,8 @@ def openbook(name):
     # print(f)
     # f[0] = f[0].replace("   ", "")
     # new_f = (''.join(f))
-    new_f = f[0].strip()
+    new_f = f[0].strip().lower()
+    new_f = list(new_f.split(" "))
 
     # set chromodriver.exe path
     chrome_opt = Options()
@@ -140,21 +141,43 @@ def openbook(name):
     PATH = 'website\chromedriver.exe'
 
     web = webdriver.Chrome(PATH, chrome_options=chrome_opt)
-    web.get('https://drive.google.com/file/d/1cSSLbB6kasxZRbQHx6LDvzacGYGGFK_F/view')
-    # web.get('https://app.luminpdf.com/viewer/633a688daa40c0408012f8c2')
+    # web.get('https://drive.google.com/file/d/1cSSLbB6kasxZRbQHx6LDvzacGYGGFK_F/view')
+    web.get('https://www.dropbox.com/s/bd2ne9roiqbyj9f/Terjemah%20Fiqih%204%20Madzhab%20Jilid%201_compressed.pdf?dl=0')
     web.maximize_window()
 
     keyboard = Controller()
 
     time.sleep(10)
-
+    pydirectinput.click(x=1171, y=278)
     pyautogui.scroll(-100)
-
-    # time.sleep(10)
+    pydirectinput.click(x=1780, y=931)
+    pyautogui.scroll(-100)
+    pydirectinput.click(x=1171, y=278)
+    time.sleep(10)
 
     pyautogui.hotkey('ctrl', 'f')
-    pyautogui.typewrite(new_f)
+    pyautogui.typewrite('a')
+    pyautogui.press('backspace')
+    for i in range(len(new_f)):
+        pyautogui.typewrite(new_f[i])
+        if i < len(new_f):
+            pyautogui.typewrite(" ")
+
+    time.sleep(5)
+    time.sleep(5)
+
+    pyautogui.press('backspace')
+    pyautogui.typewrite(' ')
+    pyautogui.press('backspace')
+
+    time.sleep(5)
+    time.sleep(5)
+
+    pyautogui.press('backspace')
+    pyautogui.typewrite(' ')
+    pyautogui.press('backspace')
+    # pyautogui.typewrite(new_f)
     # pyautogui.press('tab')
-    # pyautogui.hotkey('Return')
-    pydirectinput.click(x=1797, y=229)
+    pyautogui.hotkey('Return')
+    # pydirectinput.click(x=1797, y=229)
     return redirect(url_for('views.home'))

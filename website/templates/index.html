@@ -2,70 +2,145 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIPEMAZHAB - Sistem Pencarian Hukum FIqih</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>SIPEMABLAB</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static',filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for('static',filename='assets/vendor/aos/aos.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static',filename='assets/css/style.css')}}" rel="stylesheet">
+
 </head>
 
 <body>
-    <section id="home">
-        <nav>
-            <a href="#home" class="logo" style="margin-left: 10px; text-decoration:none;">SIPEMAZHAB</a>
-            <!-- <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#certificate">Certificate</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul> -->
-        </nav>
-        <div class="first-container">
-            <p>Sistem Pencarian Hukum Fiqih</p>
-            <p>Menurut Mazhab Syafi’i, Hanafi Maliki dan Hambali</p>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="index.html"><span>SIPEMAZHAB</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
+          <div>
+            <h1>Sistem Pencarian Hukum Fiqih</h1>
+            <h5>Menurut Mazhab Syafi’i, Hanafi Maliki dan Hambali</h5><br>
             <form method="post" action="/result">
-                <input name="query" class="search" type="text" placeholder="Cari Hukum">
-                <button type="submit" class="ig-button">Cari</button>
+              <input name="query" class="search" type="text" placeholder="Cari Hukum">
+              <button type="submit" class="btn btn-login">Cari</button>
             </form>
+          </div>
         </div>
-        <img src="{{ url_for('static',filename='styles/img/profile.png') }}" class="model" alt="model">
-    </section>
-    
-    <div class="certificate" id="certificate" style="padding-top: 90px;">
-        <div class="certificate-text">
-            <p>Tentang Aplikasi</p>
-            <!-- <p>Obtained</p> -->
-            <p>Aplikasi ini merupakan Sistem Pencarian yang menerapkan konsep STKI (Sistem Temu Kembali Informasi) dengan Metode Vector Space Model (VSM) dan
-            Positional Index</p>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
+          <img src="{{ url_for('static',filename='assets/img/profile.png')}}" class="img-fluid model" alt="">
         </div>
-        <!-- <div class="box">
-            <div class="box-1" onclick="window.location.href='img/certificate-1.jpg';"><img src="
-                img/certificate-1.jpg" alt="certificate-1" width="300px;"></div>
-            <div class="box-2" onclick="window.location.href='img/certificate-2.jpg';"><img src="img/certificate-2.jpg"
-                    alt="certificate-2" width="300px"></div>
-            <div class="box-3" onclick="window.location.href='img/certificate-3.jpg';"><img src="img/certificate-3.jpg"
-                    alt="certificate-3" width="300px"></div>
-        </div> -->
+      </div>
     </div>
-    <div class="contact" id="contact">
-        <p>If you want to contact me for business or something click this button.</p>
-        <a href="mailto:raden.ijlal@gmail.com"><button>Contact Me</button></a>
-    </div>
-    <footer>
-        <p>MILRAGA</p>
-        <p>Also check my other social media here.</p>
-        <div class="social-media">
-            <a href="https://www.facebook.com/muh.ijlal"><img src="{{ url_for('static',filename='styles/img/facebook.png') }}" width="15px" alt="facebook"></a>
-            <a href="https://twitter.com/ijlald24"><img src="{{ url_for('static',filename='styles/img/twitter.png') }}" width="15px" alt="twitter"></a>
-            <a href="https://www.youtube.com/channel/UCVH_MfLho-oFJflbcGPsbDw"><img src="{{ url_for('static',filename='styles/img/youtube.png') }}" width="15px"
-                    alt="youtube"></a>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="zoom-in">
+            <img src="{{ url_for('static',filename='assets/img/about.jpg')}}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
+            <div class="content pt-4 pt-lg-0">
+              <h3>Tentang Aplikasi</h3>
+              <p class="font-italic">
+                Aplikasi ini merupakan Sistem Pencarian yang menerapkan konsep STKI (Sistem Temu Kembali Informasi)
+                dengan Metode Vector Space Model (VSM) dan
+                Positional Index,
+              </p>
+              
+            </div>
+          </div>
         </div>
-        <p class="copyright">Copyright Muhammad Ijlal Prayoga</p>
-    </footer>
-    <div class="up-button">
-        <button onclick="window.location.href='#home';">^</button>
+
+      </div>
+    </section><!-- End About Section -->
+
+  </main><!-- End #main -->
+
+ <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>SIPEMAZHAB</h3>
+              <p>
+                <strong>Author :</strong> Muhammad Ijlal Prayoga<br><br>
+                <strong>Nomor Kontak:</strong> +628 52 4104 1620<br>
+                <strong>Email:</strong> raden.ijlal@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://www.facebook.com/muh.ijlal" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="https://twitter.com/ijlald24" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/mil_raga/" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+                <!-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Muhammad Ijlal Prayoga</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+
+  <a href="#" class="back-to-top"><i class="bx bxs-up-arrow-alt"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static',filename='assets/vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='assets/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{ url_for('static',filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='assets/vendor/venobox/venobox.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='assets/vendor/aos/aos.js')}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static',filename='assets/js/main.js')}}"></script>
+
 </body>
 
 </html>
