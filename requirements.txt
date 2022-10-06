@@ -1,0 +1,10 @@
+Flask
+Sastrawi
+pdfminer.six
+nltk
+docx2pdf
+selenium
+pymupdf
+pyautogui
+pydirectinput
+pillow
