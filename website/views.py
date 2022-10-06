@@ -141,18 +141,18 @@ def openbook(name):
     PATH = 'website\chromedriver.exe'
 
     web = webdriver.Chrome(PATH, chrome_options=chrome_opt)
-    # web.get('https://drive.google.com/file/d/1cSSLbB6kasxZRbQHx6LDvzacGYGGFK_F/view')
-    web.get('https://www.dropbox.com/s/bd2ne9roiqbyj9f/Terjemah%20Fiqih%204%20Madzhab%20Jilid%201_compressed.pdf?dl=0')
+    web.get('https://drive.google.com/file/d/1cSSLbB6kasxZRbQHx6LDvzacGYGGFK_F/view')
+    # web.get('https://www.dropbox.com/s/bd2ne9roiqbyj9f/Terjemah%20Fiqih%204%20Madzhab%20Jilid%201_compressed.pdf?dl=0')
     web.maximize_window()
 
     keyboard = Controller()
 
     time.sleep(10)
-    pydirectinput.click(x=1171, y=278)
+    # pydirectinput.click(x=1171, y=278)
     pyautogui.scroll(-100)
-    pydirectinput.click(x=1780, y=931)
+    # pydirectinput.click(x=1780, y=931)
     pyautogui.scroll(-100)
-    pydirectinput.click(x=1171, y=278)
+    # pydirectinput.click(x=1171, y=278)
     time.sleep(10)
 
     pyautogui.hotkey('ctrl', 'f')
