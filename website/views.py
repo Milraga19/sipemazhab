@@ -170,14 +170,14 @@ def openbook(name):
     pyautogui.typewrite(' ')
     pyautogui.press('backspace')
 
-    time.sleep(5)
-    time.sleep(5)
+    # time.sleep(5)
+    # time.sleep(5)
 
     pyautogui.press('backspace')
     pyautogui.typewrite(' ')
     pyautogui.press('backspace')
     # pyautogui.typewrite(new_f)
-    # pyautogui.press('tab')
+    pyautogui.press('enter')
     pyautogui.hotkey('Return')
     # pydirectinput.click(x=1797, y=229)
     return redirect(url_for('views.home'))
