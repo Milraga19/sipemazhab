@@ -27,4 +27,4 @@ And after that you can run the app from live server
 
 ## Authors
 
-* **Muhammad Ijlal Prayoga** - *Initial work* - [PurpleBooth](https://github.com/Milraga19)
+* **Muhammad Ijlal Prayoga** - *Initial work* - [Milraga19](https://github.com/Milraga19)
